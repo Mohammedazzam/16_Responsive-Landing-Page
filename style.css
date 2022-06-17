@@ -35,6 +35,7 @@ nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
 }
 
 nav .container img {
@@ -154,3 +155,69 @@ section .container a:hover {
   );
 }
 /* End Header Section */
+
+/* Start Responsive */
+@media screen and (max-width: 700px) {
+  /* NAVIGATION BAR */
+  nav .container {
+    width: 100%;
+    padding: 1rem 0;
+    background: var(--color-secondary);
+  }
+
+  nav img {
+    margin-left: 1rem;
+  }
+
+  /* SHOW NAVIGATION MENU ON CHECKED */
+  nav .container #showNav:checked ~ ul {
+    display: block;
+  }
+
+  nav .container #toggleNav {
+    display: inline-block;
+    color: var(--color-light);
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+
+  nav .container #toggleNav:hover {
+    color: var(--color-tertiary);
+  }
+
+  nav .container ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+
+  nav .container li {
+    text-align: center;
+    background: var(--color-primary);
+    padding: 2rem 0;
+    transition: all 300ms ease;
+    cursor: pointer;
+  }
+
+  nav .container li:hover {
+    background: var(--color-tertiary);
+  }
+
+  section .container h1 {
+    font-size: 5.3rem;
+  }
+
+  /* HEADER SECTION */
+  section .container h3 {
+    font-size: 1.5rem;
+  }
+
+  section .container a {
+    padding: 1rem 2rem;
+  }
+}
+
+/* End Responsive */
